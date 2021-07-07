@@ -1,0 +1,6 @@
+.horizontal {
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}

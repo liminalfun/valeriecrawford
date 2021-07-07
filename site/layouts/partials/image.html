@@ -1,0 +1,7 @@
+{{ if .image }}
+<div class="max-h-100 contain">
+  <img data-blink-src="{{ .image }}" alt="{{ .alt }}">
+  {{ if .credit }}
+  {{ end }}
+</div>
+{{ end }}

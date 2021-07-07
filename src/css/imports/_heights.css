@@ -22,6 +22,10 @@
 
 .min-vh-100 { min-height: 100vh; }
 
+/* Max Heights */
+
+.max-h-100 { max-height: 100%; }
+
 
 /* String Properties */
 

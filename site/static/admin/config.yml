@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   repo: liminalfun/valeriecrawford
+  branch: master
 
 
 local_backend: true
@@ -34,6 +35,18 @@ collections: # A list of collections the CMS should be able to edit
         name: "home"
         fields:
           - {label: Title, name: title, widget: string}
+          - {label: "Content", name: content, widget: list, fields: [
+              {label: "Image", name: "img", widget: "object", required: false, collapsed: true, fields: [
+                {label: "Image", name: "image", widget: "image"},
+                {label: "Alt Text", name: "alt", widget: "string", required: false},
+                {label: "Link", name: "link", widget: "string", required: false},
+                {label: "Caption", name: "caption", widget: "string", required: false}]},
+              {label: "Heading", name: "heading", widget: "string", required: false},
+              {label: "Text", name: "text", widget: "markdown", required: false}],
+              {label: "Button", name: "btn", widget: "object", required: false, collapsed: true, fields: [
+                {label: "Text", name: "text", widget: "string", required: false},
+                {label: "Link", name: "link", widget: "string", required: false}]}
+              }
           - {label: Subtitle, name: subtitle, widget: string}
           - {label: Image, name: image, widget: image}
           - {label: "Blurb", name: blurb, widget: object, fields: [
