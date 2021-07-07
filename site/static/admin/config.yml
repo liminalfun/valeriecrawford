@@ -1,5 +1,16 @@
 backend:
   name: git-gateway
+  repo: liminalfun/valeriecrawford
+
+
+local_backend: true
+
+media_library:
+  name: uploadcare
+  config:
+    publicKey: 414af48ed6e30290fd36
+  settings:
+    autoFilename: true
 
 media_folder: "site/static/img" # Folder where user uploaded files should go
 public_folder: "img"
