@@ -83,5 +83,11 @@
 @import './imports/_debug-children';
 @import './imports/_debug-grid';
 
+/* Components */
+@import './components/marquee';
+
+/* Pages */
+@import './pages/home';
+
 /* Uncomment out the line below to help debug layout issues */
 /*@import './imports/_debug';*/
