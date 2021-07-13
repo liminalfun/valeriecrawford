@@ -20,7 +20,7 @@
 
   .product-teaser {
     width: 150px;
-    height: 150px;
+    height: auto;
     position: relative;
     .product-link {
       height: 150px;
@@ -31,8 +31,8 @@
     }
   }
   .product-link {
-    height: 150px;
     width: 150px;
+    height: auto;
     &:hover .product-name {
       opacity: 1;
     }
@@ -43,7 +43,7 @@
     > img {
       position: absolute;
       width: 150px;
-      height: 150px;
+      height: auto;
       object-fit: cover;
     }
     img:nth-child(2) {

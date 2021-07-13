@@ -1,6 +1,6 @@
 body,
 html {
-  background-color: $color-light;
+  background-color: $color-gray;
   color: $color-dark;
   font-size: 16px;
   margin: 0;
@@ -80,7 +80,6 @@ a {
   transition: $transition;
 }
 
-a:not(.nav-item),
 a:not(.btn) {
   &:hover,
   &:active {
@@ -112,6 +111,10 @@ a:not(.btn) {
 //   background-color: darken($color-light, 30%);
 //   color: $color-light;
 // }
+
+.color-white {
+  color: $color-white;
+}
 
 // Hide
 

@@ -10,15 +10,15 @@
   // background-color: inherit;
   color: inherit;
   // background-color: $color-dark;
-  color: $color-light;
+  color: $color-white;
 
   .nav-item {
     font-family: $font-heading !important;
     text-transform: uppercase;
 
-    &:hover,
-    &:active {
-      color: $color-accent;
-    }
+    // &:hover,
+    // &:active {
+    //   color: $color-accent;
+    // }
   }
 }

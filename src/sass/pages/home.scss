@@ -5,7 +5,7 @@
   // height: calc(100vh - 50px);
   position: sticky;
   top: $h-top;
-  background-color: $color-light;
+  background-color: $color-gray;
 }
 
 .left,
@@ -24,6 +24,7 @@
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+  color: $color-white;
 
   &.bottom {
     top: 80%;
