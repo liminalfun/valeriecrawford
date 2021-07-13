@@ -4,7 +4,10 @@ html {
   color: $color-dark;
   font-size: 16px;
   margin: 0;
-  // height: $h-100; // makes sticky not work
+}
+
+.h-full {
+  height: $h-100; // makes sticky not work
 }
 
 .main {
