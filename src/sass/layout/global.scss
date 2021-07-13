@@ -3,6 +3,12 @@ html {
   background-color: $color-light;
   color: $color-dark;
   font-size: 16px;
+  margin: 0;
+  // height: $h-100; // makes sticky not work
+}
+
+.main {
+  margin-top: 80px;
 }
 
 // Typography --------------------------------
@@ -56,4 +62,35 @@ a,
 a:visited {
   text-decoration: none;
   color: inherit;
+}
+
+// Theme colors
+
+.theme-dark {
+  background-color: $color-black;
+  color: $color-light;
+}
+
+.theme-light {
+  background-color: $color-light;
+}
+
+.theme-light-1 {
+  background-color: darken($color-light, 10%);
+}
+
+.theme-light-2 {
+  background-color: darken($color-light, 20%);
+  color: $color-light;
+}
+
+.theme-light-3 {
+  background-color: darken($color-light, 30%);
+  color: $color-light;
+}
+
+// Hide
+
+.hide {
+  display: none;
 }

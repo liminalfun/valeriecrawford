@@ -1,18 +1,25 @@
 .topbar {
   display: flex;
   width: 100vw;
+  height: 80px;
+  position: fixed;
+  background-color: inherit;
+  top: 0;
+  z-index: 2;
 }
 .logo {
+  // display: none; // on homepage only
   object-fit: contain;
-  height: 80px;
-  width: 60px;
+  height: 64px;
+  width: 48px;
+  padding: 0.5em;
 }
 
 .marquee {
   white-space: nowrap;
   overflow: hidden;
   position: relative;
-  height: 50px;
+  height: 80px;
   width: 100%;
 }
 
@@ -22,7 +29,7 @@
   width: calc(100%-80px);
   height: 100%;
   margin: 0;
-  line-height: 50px;
+  line-height: 80px;
   text-align: center;
   -moz-transform: translate(100%);
   -webkit-transform: translateX(100%);

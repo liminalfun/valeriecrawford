@@ -1,0 +1,103 @@
+.container {
+  display: flex;
+  width: 100vw;
+  height: calc(100vh - 50px);
+  position: sticky;
+  top: 80px;
+}
+
+.left,
+.right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  p {
+    padding: $sp3;
+  }
+}
+.fixed-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  &.bottom {
+    top: 80%;
+  }
+
+  &.line-bottom {
+    border-bottom: 1px $color-accent solid;
+    padding: 0.5em 3em;
+  }
+  .line-left {
+    width: 200px;
+    height: 1px;
+    background-color: $color-accent;
+    margin-left: 0.5em;
+    margin-bottom: 0.3em;
+    display: inline-block;
+  }
+}
+.full-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+.sticky {
+  position: sticky;
+  top: 80px;
+  height: calc(100vh - 50px - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text {
+  height: calc(100vh - 50px - 80px);
+}
+
+// .sticky-container {
+//   position: relative;
+//   display: flex;
+//   width: 100vw;
+//   height: $h-full;
+//   div,
+//   div div {
+//     width: 50%;
+//     height: $h-full;
+//     &:nth-child(odd) {
+//       margin-left: auto;
+//     }
+//   }
+// }
+
+// .full-image img {
+//   // background-image: url("https://ucarecdn.com/c7ebff16-51e5-4aef-85b3-55f41907f8e5/VALERIE_CRAWFORD_OUTPUT
+//   //   1.jpg");
+//   // background-size: cover;
+//   // background-position: center;
+//   // width: 50vw;
+//   height: calc(100vh - 100px);
+//   object-fit: cover;
+// }
+
+// .sticky {
+//   position: -webkit-sticky;
+//   position: sticky;
+//   top: 0;
+// }
+
+// .text {
+//   padding: $sp3;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+// }

@@ -1,6 +1,10 @@
 <div class="topbar">
   <a href="/">
-    <img class="logo" src="img/logo_green.svg" alt="Valerie Crawford Jewelry" />
+    <img
+      class="logo {{ if .IsHome }} hide {{ end }}"
+      src="img/logo_green.svg"
+      alt="Valerie Crawford Jewelry"
+    />
   </a>
   <div class="marquee">
     <p class="marquee-text">

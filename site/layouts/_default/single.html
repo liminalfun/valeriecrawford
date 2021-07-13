@@ -1,6 +1,15 @@
-{{ define "main" }}
-
-{{ partial "jumbotron" (dict "imageUrl" "/img/7.jpg" "title" "This is where the heading goes" "subtitle" "This is where the subtitle goes") }}
-{{ .Content }}
-
-{{ end }}
+{{ define "main" }} {{ with .Params }}
+<div class="product">
+  <div class="product-images">
+    {{ range .images }}
+    <img data-blink-src="{{ .img.image }}" />
+    {{ end }}
+  </div>
+  <div class="product-info">
+    <h1 class="product-headline">{{ .Title }}</h1>
+    <div class="product-price">${{ .price }} CAD</div>
+    <p>{{ .description }}</p>
+    <a href="{{ .link }}" class="btn">Buy Now </a>
+  </div>
+</div>
+{{ end }} {{ end }}

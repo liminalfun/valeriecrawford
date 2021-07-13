@@ -1,0 +1,13 @@
+// Links --------------------------------
+
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Shop --------------------------------
+
+.product-name {
+  opacity: 0;
+}
