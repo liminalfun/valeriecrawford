@@ -3,7 +3,7 @@
   width: 100vw;
   height: calc(100vh - 50px);
   position: sticky;
-  top: 80px;
+  top: $h-top;
 }
 
 .left,
@@ -52,15 +52,15 @@
 
 .sticky {
   position: sticky;
-  top: 80px;
-  height: calc(100vh - 50px - 80px);
+  top: $h-top;
+  height: $h-full;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .text {
-  height: calc(100vh - 50px - 80px);
+  height: $h-full;
 }
 
 // .sticky-container {

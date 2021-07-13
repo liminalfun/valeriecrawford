@@ -8,11 +8,11 @@ html {
 
 .h-full {
   height: $h-full; // makes sticky not work
-  margin-top: 80px;
+  margin-top: $h-top;
 }
 
 .main {
-  margin-top: 80px;
+  margin-top: $h-top;
 }
 
 // Typography --------------------------------

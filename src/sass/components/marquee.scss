@@ -1,14 +1,18 @@
+// Height Variable ---------------
+@include breakpoint(phablet) {
+  $h-top: 80px;
+}
+
 .topbar {
   display: flex;
   width: 100vw;
-  height: 80px;
+  height: $h-top;
   position: fixed;
   background-color: inherit;
   top: 0;
   z-index: 999;
 }
 .logo {
-  // display: none; // on homepage only
   object-fit: contain;
   height: 64px;
   width: 48px;
@@ -19,17 +23,17 @@
   white-space: nowrap;
   overflow: hidden;
   position: relative;
-  height: 80px;
+  height: $h-top;
   width: 100%;
 }
 
 .marquee-text {
   position: absolute;
   left: 80px;
-  width: calc(100%-80px);
+  width: calc(100% - 80px);
   height: 100%;
   margin: 0;
-  line-height: 80px;
+  line-height: $h-top;
   text-align: center;
   -moz-transform: translate(100%);
   -webkit-transform: translateX(100%);
@@ -38,6 +42,21 @@
   -webkit-animation: scroll-left 2s linear infinite;
   animation: scroll-left 20s linear infinite;
 }
+
+// Media ------------
+
+@include breakpoint(mobileonly) {
+  .marquee-text {
+    font-size: 0.875rem;
+  }
+  .logo {
+    height: 40px;
+    width: 30px;
+    padding: 0.3em;
+  }
+}
+
+// Animation ------------
 
 @-moz-keyframes scroll-left {
   0% {
