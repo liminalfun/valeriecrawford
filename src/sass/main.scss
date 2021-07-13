@@ -1,5 +1,7 @@
-// Helpers ----------------------------------
+// Reset ----------------------------------
+@import "imports/normalize";
 
+// Helpers ----------------------------------
 @import "helpers/vars";
 @import "helpers/fonts";
 
@@ -10,8 +12,11 @@
 @import "components/buttons";
 @import "components/nav";
 @import "components/marquee";
+@import "components/form";
 
 // Pages ----------------------------------
 @import "pages/home";
 @import "pages/shop";
 @import "pages/product";
+@import "pages/contact";
+@import "pages/process";

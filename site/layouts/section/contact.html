@@ -1,24 +1,22 @@
 {{ define "main" }}
 
-<div class="ph3 bg-off-white">
-	<div class="center mw6 pv3">
-
-		<img src="{{ .Params.logo }}" alt="" class="db w4 center pv4">
-
-		{{ .Content }}
-
-		<div class="flex-ns mb3">
-	        	{{ range .Params.contact_entries }}
-				<div>
-					<h4 class="f4 b lh-title mb2 primary">{{ .heading }}</h4>
-					<p>{{ .text }}</p>
-				</div>
-			{{ end }}
-		</div>
-
-		{{ partial "contact-form" . }}
-
-	</div>
+<div class="contact">
+  <div class="contact-info">
+    <h1>Contact</h1>
+    {{ .Content }} {{ range .Params.contact_entries }}
+    <div>
+      <h4 class="">{{ .heading }}</h4>
+      <p>{{ .text }}</p>
+    </div>
+    {{ end }} {{ partial "contact-form" . }}
+  </div>
+  <div class="contact-image">
+    <img
+      data-blink-src="https://ucarecdn.com/c7ebff16-51e5-4aef-85b3-55f41907f8e5/VALERIE_CRAWFORD_OUTPUT
+		1.jpg"
+      alt=""
+    />
+  </div>
 </div>
 
 {{ end }}

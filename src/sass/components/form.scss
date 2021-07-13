@@ -1,0 +1,45 @@
+form {
+  max-width: 100%;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0.5em 0;
+
+  &:not(.message) {
+    display: flex;
+    border-bottom: 1px solid $color-dark;
+    padding-bottom: 0;
+  }
+  &.message {
+    margin-top: 1em;
+  }
+}
+label {
+  color: lighten($color-dark, 10%);
+  width: 50px;
+  align-self: center;
+  margin-right: 1em;
+}
+
+input,
+textarea {
+  background-color: inherit;
+  width: 100%;
+  border: none;
+  padding: 0.5em;
+  box-sizing: border-box;
+  color: $color-black;
+  &:focus-visible,
+  &:focus {
+    outline: none;
+    // border: 1px solid $color-accent;
+    background-color: transparentize(white, 0.8);
+  }
+}
+
+textarea {
+  margin-top: 0.5em;
+  border: 1px solid $color-dark;
+}

@@ -3,12 +3,22 @@
   text-align: center;
   margin: 1em 0;
   padding: 0.5em 2em;
-  width: 150px;
+  min-width: 150px;
   background-color: $color-accent;
   color: $color-black !important;
   border-radius: 4px;
   transition: $transition;
   &:hover {
     background-color: lighten($color-accent, 5%);
+  }
+}
+
+button {
+  border: none;
+  line-height: 1.25rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+  @include breakpoint(mobileonly) {
+    width: 100%;
   }
 }
