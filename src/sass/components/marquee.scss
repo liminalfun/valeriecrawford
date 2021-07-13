@@ -1,8 +1,3 @@
-// Height Variable ---------------
-@include breakpoint(phablet) {
-  $h-top: 80px;
-}
-
 .topbar {
   display: flex;
   width: 100vw;

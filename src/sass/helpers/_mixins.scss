@@ -22,3 +22,18 @@
     }
   }
 }
+
+// Heights
+
+// Height Variable ---------------
+@include breakpoint(phablet) {
+  $h-top: 80px;
+}
+
+@mixin h-full($top) {
+  @if $top == 80px {
+    height: calc(100vh - 80px - $h-bottom);
+  } @else if $top == 50px {
+    height: calc(100vh - 50px - $h-bottom);
+  }
+}
