@@ -30,6 +30,7 @@
 .marquee-text {
   position: absolute;
   color: $color-white;
+  font-weight: 200;
   left: 80px;
   width: calc(100% - 80px);
   height: 100%;
