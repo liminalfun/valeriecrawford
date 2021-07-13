@@ -7,7 +7,7 @@
   background-color: $color-accent;
   color: $color-black !important;
   border-radius: 4px;
-  transition: all 0.3s;
+  transition: $transition;
   &:hover {
     background-color: lighten($color-accent, 5%);
   }

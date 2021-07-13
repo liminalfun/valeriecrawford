@@ -16,6 +16,9 @@ $font-heading: Gulax, "Helvetica Neue", Inter, -apple-system, BlinkMacSystemFont
 $h-full: calc(100vh - 100px);
 $h-100: 100vh;
 
+// Transitions ----------------------------------
+$transition: all 300ms 200ms;
+
 // Spacing --------------------------------------
 $sp1: 1em;
 $sp2: 1.5em;

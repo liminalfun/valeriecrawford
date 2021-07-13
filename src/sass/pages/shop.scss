@@ -1,6 +1,10 @@
 .shop {
   margin: $sp2 $sp1;
-  @include breakpoint(tablet) {
+  .line-bottom {
+    border-bottom: 1px $color-accent solid;
+    padding: 0.25em 0;
+  }
+  @include breakpoint(phablet) {
     display: flex;
     margin: $sp3 $sp4;
     justify-content: space-between;
@@ -10,6 +14,7 @@
   }
   .product-images {
     position: relative;
+    width: 150px;
     > img {
       position: absolute;
       width: 150px;
@@ -32,11 +37,15 @@
 }
 .product-name {
   opacity: 0;
-  transition: all 300ms 200ms;
+  transition: $transition;
   position: absolute;
   bottom: -150px;
   width: 100%;
-  padding-left: 0.3em;
-  background-color: transparentize($color-light, 0.3);
-  color: $color-black !important;
+  background-color: transparentize($color-black, 0.5);
+  color: $color-light;
+
+  h4 {
+    margin: 0.5rem;
+    text-transform: uppercase;
+  }
 }

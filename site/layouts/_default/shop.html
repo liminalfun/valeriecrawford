@@ -14,6 +14,7 @@
       maecenas accumsan lacus vel facilisis volutpat est velit egestas.
       Elementum eu facilisis sed odio morbi quis commodo odio.
     </p>
+    <a href="/process" class="line-bottom">READ PROCESS</a>
   </div>
   <div class="grid">
     {{ range where .Site.Pages "Type" "sinthome"}}
@@ -23,7 +24,9 @@
           {{ range .Params.images }}
           <img data-blink-src="{{ .img.image }}" />
           {{ end }}
-          <h4 class="product-name">{{ .Title }}</h4>
+          <div class="product-name">
+            <h4>{{ .Title }}</h4>
+          </div>
         </div>
       </a>
     </div>
