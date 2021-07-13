@@ -50,54 +50,60 @@
   object-fit: cover;
 }
 
-.sticky {
-  position: sticky;
-  top: $h-top;
-  height: $h-full;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .text {
   height: $h-full;
 }
 
-// .sticky-container {
-//   position: relative;
-//   display: flex;
-//   width: 100vw;
-//   height: $h-full;
-//   div,
-//   div div {
-//     width: 50%;
-//     height: $h-full;
-//     &:nth-child(odd) {
-//       margin-left: auto;
-//     }
-//   }
-// }
+// Media ------------------
 
-// .full-image img {
-//   // background-image: url("https://ucarecdn.com/c7ebff16-51e5-4aef-85b3-55f41907f8e5/VALERIE_CRAWFORD_OUTPUT
-//   //   1.jpg");
-//   // background-size: cover;
-//   // background-position: center;
-//   // width: 50vw;
-//   height: calc(100vh - 100px);
-//   object-fit: cover;
-// }
+@include breakpoint(mobileonly) {
+  .container {
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+  }
 
-// .sticky {
-//   position: -webkit-sticky;
-//   position: sticky;
-//   top: 0;
-// }
+  .left,
+  .right {
+    width: 100%;
+    position: sticky;
+    top: $h-top;
+    height: 100vh;
 
-// .text {
-//   padding: $sp3;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-// }
+    p {
+      padding: $sp2;
+    }
+  }
+
+  .right {
+    background-color: inherit;
+  }
+  .fixed-center {
+    top: 25%;
+    &.line-bottom {
+      width: max-content;
+      padding: 0;
+      top: 75%;
+
+      a {
+        font-size: 1.25rem;
+        font-family: $font-heading;
+        background-color: $color-accent;
+        padding: 0.8em 1em;
+        padding-bottom: 0.7em;
+        &:hover,
+        &:active {
+          background-color: darken($color-accent, 10%);
+          color: inherit;
+        }
+      }
+    }
+    &.bottom {
+      top: 90%;
+      width: max-content;
+    }
+    .line-left {
+      width: 100px;
+    }
+  }
+}

@@ -4,6 +4,8 @@
 // Helpers ----------------------------------
 @import "helpers/vars";
 @import "helpers/fonts";
+@import "helpers/mixins";
+@import "helpers/extend";
 
 // Layout ----------------------------------
 @import "layout/global";

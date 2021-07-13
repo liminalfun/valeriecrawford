@@ -13,7 +13,7 @@ $font-heading: Gulax, "Helvetica Neue", Inter, -apple-system, BlinkMacSystemFont
   "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
 
 // Heights --------------------------------------
-$h-full: calc(100vh - $h-top - $h-bottom);
+$h-full: calc(100vh - 80px - 50px); // based on h-top and h-bottom
 $h-100: 100vh;
 $h-top: 50px; // mobile size redefined in marquee
 $h-bottom: 50px;
@@ -27,28 +27,3 @@ $sp2: 1.5em;
 $sp3: 2em;
 $sp4: 2.5em;
 $sp5: 3em;
-
-// Breakpoints --------------------------------------
-@mixin breakpoint($point) {
-  @if $point == desktop {
-    @media (min-width: 70em) {
-      @content;
-    }
-  } @else if $point == laptop {
-    @media (min-width: 64em) {
-      @content;
-    }
-  } @else if $point == tablet {
-    @media (min-width: 50em) {
-      @content;
-    }
-  } @else if $point == phablet {
-    @media (min-width: 37.5em) {
-      @content;
-    }
-  } @else if $point == mobileonly {
-    @media (max-width: 37.5em) {
-      @content;
-    }
-  }
-}
