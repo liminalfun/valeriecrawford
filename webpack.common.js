@@ -1,8 +1,8 @@
 const webpack = require("webpack");
 const path = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const autoprefixer = require("autoprefixer");
-const cssnano = require("cssnano");
+// const autoprefixer = require("autoprefixer");
+// const cssnano = require("cssnano");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const AssetsPlugin = require("assets-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -40,8 +40,8 @@ module.exports = {
             loader: "postcss-loader",
             options: {
               plugins: [
-                cssnano({ preset: "default" }),
-                autoprefixer({ grid: true }),
+                // cssnano({ preset: "default" }),
+                // autoprefixer({ grid: true }),
               ],
             },
           },
