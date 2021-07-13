@@ -1,8 +1,9 @@
 ---
-title: Great coffee with a conscience
+title: Home
 content:
   - img:
-      image: https://ucarecdn.com/c7ebff16-51e5-4aef-85b3-55f41907f8e5/VALERIE_CRAWFORD_OUTPUT
+      image:
+        https://ucarecdn.com/c7ebff16-51e5-4aef-85b3-55f41907f8e5/VALERIE_CRAWFORD_OUTPUT
         1.jpg
   - img:
       image: https://ucarecdn.com/42e5496a-6495-4b81-be10-541be44e5473/sinthome-movement.gif
@@ -16,7 +17,8 @@ blurb:
     profits are reinvested in their communities.
 intro:
   heading: What we offer
-  text: Kaldi is the ultimate spot for coffee lovers who want to learn about their
+  text:
+    Kaldi is the ultimate spot for coffee lovers who want to learn about their
     java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone.

@@ -1,6 +1,5 @@
 <head>
   <title>{{ .Title }} | {{ $.Site.Title }}</title>
-  <link rel="preload" href="/critical.css" />
   {{ $stylesheet := .Site.Data.webpack.main }} {{ with $stylesheet.css }}
   <link href="{{ relURL . }}" rel="stylesheet" />
   {{ end }}
