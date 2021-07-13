@@ -1,6 +1,8 @@
 const webpack = require("webpack");
 const path = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const autoprefixer = require("autoprefixer");
+const cssnano = require("cssnano");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const AssetsPlugin = require("assets-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -12,46 +14,60 @@ module.exports = {
   },
 
   output: {
-    path: path.join(__dirname, "dist")
+    path: path.join(__dirname, "dist"),
   },
 
   module: {
     rules: [
       {
         test: /\.((png)|(eot)|(woff)|(woff2)|(ttf)|(svg)|(gif))(\?v=\d+\.\d+\.\d+)?$/,
-        loader: "file-loader?name=/[hash].[ext]"
+        loader: "file-loader?name=/[hash].[ext]",
       },
       {
         loader: "babel-loader",
         test: /\.js?$/,
         exclude: /node_modules/,
-        query: {cacheDirectory: true}
+        query: { cacheDirectory: true },
       },
       {
         test: /\.(sa|sc|c)ss$/,
         exclude: /node_modules/,
-        use: ["style-loader", MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "sass-loader"]
-      }
-    ]
+        use: [
+          "style-loader",
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              plugins: [
+                cssnano({ preset: "default" }),
+                autoprefixer({ grid: true }),
+              ],
+            },
+          },
+          "sass-loader",
+        ],
+      },
+    ],
   },
 
   plugins: [
     new AssetsPlugin({
       filename: "webpack.json",
       path: path.join(process.cwd(), "site/data"),
-      prettyPrint: true
+      prettyPrint: true,
     }),
     new CopyWebpackPlugin([
       {
-        from: "./src/fonts/",
+        from: "../fonts/",
         to: "fonts/",
-        flatten: true
-      }
+        flatten: true,
+      },
     ]),
     new HtmlWebpackPlugin({
-      filename: 'admin/index.html',
-      template: 'src/cms.html',
+      filename: "admin/index.html",
+      template: "src/cms.html",
       inject: false,
     }),
-  ]
+  ],
 };
