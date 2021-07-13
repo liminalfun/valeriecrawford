@@ -7,8 +7,14 @@ html {
 }
 
 .h-full {
-  height: $h-full; // makes sticky not work
-  margin-top: $h-top;
+  height: calc(100vh - 100px);
+  margin-top: 50px;
+  padding-bottom: $sp3;
+  @include breakpoint(phablet) {
+    height: $h-full; // makes sticky not work
+    margin-top: 80px;
+    margin-bottom: $h-bottom;
+  }
 }
 
 .main {

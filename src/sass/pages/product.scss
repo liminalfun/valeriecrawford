@@ -1,9 +1,6 @@
 .product {
   margin: $sp3;
-  display: flex;
-  justify-content: space-between;
   .product-images {
-    width: 48%;
     > img {
       width: 100%;
       object-fit: cover;
@@ -13,6 +10,18 @@
     }
   }
   .product-info {
-    width: 48%;
+  }
+}
+
+@include breakpoint(phablet) {
+  .product {
+    display: flex;
+    justify-content: space-between;
+    .product-images {
+      width: 48%;
+    }
+    .product-info {
+      width: 48%;
+    }
   }
 }

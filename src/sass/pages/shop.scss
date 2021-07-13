@@ -1,5 +1,7 @@
-.shop {
+.shop-wrapper {
   margin: $sp2 $sp1;
+}
+.shop {
   .line-bottom {
     border-bottom: 1px $color-accent solid;
     padding: 0.25em 0;
@@ -11,8 +13,10 @@
 }
 
 .shop-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  > * {
+    flex-basis: calc(100% / 3);
+  }
 
   .product-teaser {
     width: 150px;
@@ -58,12 +62,18 @@
 }
 
 @include breakpoint(phablet) {
+  .shop-wrapper {
+    margin: $sp3 $sp4;
+    padding: 1em 0;
+  }
   .shop {
     display: flex;
-    margin: $sp3 $sp4;
     justify-content: space-between;
     > * {
       flex-basis: 45%;
+    }
+    .shop-grid {
+      margin: 1em;
     }
     .product-teaser:hover {
       &:hover .product-name {

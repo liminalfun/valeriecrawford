@@ -1,36 +1,38 @@
 {{ define "main" }}
-<section class="shop">
-  <div class="shop-text">
-    <h1>Sinthome</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Egestas quis ipsum
-      suspendisse ultrices gravida dictum. Sem integer vitae justo eget magna
-      fermentum iaculis eu. Ullamcorper eget nulla facilisi etiam dignissim diam
-      quis enim lobortis. Sit amet mauris commodo quis imperdiet massa. Nulla
-      aliquet enim tortor at auctor urna nunc. Sit amet purus gravida quis
-      blandit turpis cursus. Non consectetur a erat nam at lectus urna duis
-      convallis. Sit amet nulla facilisi morbi tempus iaculis urna id. Viverra
-      maecenas accumsan lacus vel facilisis volutpat est velit egestas.
-      Elementum eu facilisis sed odio morbi quis commodo odio.
-    </p>
-    <a href="/process" class="line-bottom">READ PROCESS</a>
-  </div>
-  <div class="shop-grid">
-    {{ range after 1 (where .Site.Pages "Type" "sinthome")}}
-    <div class="product-teaser">
-      <a class="product-link" href="{{ .Permalink }}">
-        <div class="product-images">
-          {{ range .Params.images }}
-          <img data-blink-src="{{ .img.image }}" />
-          {{ end }}
-        </div>
-      </a>
-      <div class="product-name">
-        <h4>{{ .Title }}</h4>
-      </div>
+<section class="shop-wrapper">
+  <h1>Sinthome</h1>
+  <div class="shop">
+    <div class="shop-text">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Egestas quis ipsum
+        suspendisse ultrices gravida dictum. Sem integer vitae justo eget magna
+        fermentum iaculis eu. Ullamcorper eget nulla facilisi etiam dignissim
+        diam quis enim lobortis. Sit amet mauris commodo quis imperdiet massa.
+        Nulla aliquet enim tortor at auctor urna nunc. Sit amet purus gravida
+        quis blandit turpis cursus. Non consectetur a erat nam at lectus urna
+        duis convallis. Sit amet nulla facilisi morbi tempus iaculis urna id.
+        Viverra maecenas accumsan lacus vel facilisis volutpat est velit
+        egestas. Elementum eu facilisis sed odio morbi quis commodo odio.
+      </p>
+      <a href="/process" class="line-bottom">READ PROCESS</a>
     </div>
-    {{ end }}
+    <div class="shop-grid">
+      {{ range after 1 (where .Site.Pages "Type" "sinthome")}}
+      <div class="product-teaser">
+        <a class="product-link" href="{{ .Permalink }}">
+          <div class="product-images">
+            {{ range .Params.images }}
+            <img data-blink-src="{{ .img.image }}" />
+            {{ end }}
+          </div>
+        </a>
+        <div class="product-name">
+          <h4>{{ .Title }}</h4>
+        </div>
+      </div>
+      {{ end }}
+    </div>
   </div>
 </section>
 
