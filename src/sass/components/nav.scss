@@ -1,0 +1,21 @@
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  background-color: $color-dark;
+  color: $color-light;
+
+  .nav-item {
+    font-family: $font-heading !important;
+    text-transform: uppercase;
+
+    &:hover,
+    &:active {
+      color: $color-accent;
+    }
+  }
+}
