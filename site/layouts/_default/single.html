@@ -1,15 +1,17 @@
-{{ define "main" }} {{ with .Params }}
-<section class="product">
-  <div class="product-images">
-    {{ range .images }}
-    <img data-blink-src="{{ .img.image }}" />
-    {{ end }}
-  </div>
-  <div class="product-info">
-    <h1 class="product-headline">{{ .Title }}</h1>
-    <div class="product-price">${{ .price }} CAD</div>
-    <p>{{ .description }}</p>
-    <a href="{{ .link }}" class="btn">Buy Now </a>
-  </div>
-</section>
-{{ end }} {{ end }}
+{{ define "main" }} 
+  {{ with .Params }}
+    <section class="product">
+      <div class="product-images">
+        {{ range .images }}
+          <img data-blink-src="{{ .img.image }}" />
+        {{ end }}
+      </div>
+      <div class="product-info">
+        <h1 class="product-headline">{{ .Title }}</h1>
+        <div class="product-price">${{ .price }} CAD</div>
+        <p>{{ .description }}</p>
+        <a href="{{ .link }}" class="btn">Buy Now </a>
+      </div>
+    </section>
+  {{ end }} 
+{{ end }}
