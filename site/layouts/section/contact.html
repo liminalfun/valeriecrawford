@@ -1,22 +1,32 @@
 {{ define "main" }}
 
-<div class="contact">
-  <div class="contact-info">
-    <h1>Contact</h1>
-    {{ .Content }} {{ range .Params.contact_entries }}
-    <div>
-      <h4 class="">{{ .heading }}</h4>
-      <p>{{ .text }}</p>
+  <div class="contact">
+    <div class="contact-info">
+      <h1>Contact</h1>
+      {{ .Content }} 
+    
+      {{ range .Params.contact_entries }}
+        <div>
+          <button class="accordion">
+            <h4>{{ .heading }}</h4>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z" fill="rgba(80,83,66,1)"/></svg>
+          </button>
+          
+          <div class="panel">
+            <div>{{ .text | markdownify }}</div>
+          </div>
+        </div>
+      {{ end }} 
+      
+      {{ partial "contact-form" . }}
     </div>
-    {{ end }} {{ partial "contact-form" . }}
+    <div class="contact-image">
+      <img
+        data-blink-src="https://ucarecdn.com/c7ebff16-51e5-4aef-85b3-55f41907f8e5/VALERIE_CRAWFORD_OUTPUT
+      1.jpg"
+        alt=""
+      />
+    </div>
   </div>
-  <div class="contact-image">
-    <img
-      data-blink-src="https://ucarecdn.com/c7ebff16-51e5-4aef-85b3-55f41907f8e5/VALERIE_CRAWFORD_OUTPUT
-		1.jpg"
-      alt=""
-    />
-  </div>
-</div>
 
 {{ end }}

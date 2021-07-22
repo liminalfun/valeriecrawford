@@ -23,56 +23,28 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: "Name", name: "title", widget: "string" }
-      - {
-          label: "Stripe link",
-          name: "link",
-          widget: "string",
-          required: false,
-        }
-      - {
-          label: "Description",
-          name: "description",
-          widget: "markdown",
-          required: false,
-        }
+      - label: "Stripe link"
+        name: "link"
+        widget: "string"
+        required: false
+      - label: "Description"
+        name: "description"
+        widget: "markdown"
+        required: false
       - { label: "Price", name: "price", widget: "number", required: false }
-      - {
-          label: "Images",
-          name: "images",
-          widget: "list",
-          required: false,
-          fields:
-            [
-              {
-                label: "Image",
-                name: "img",
-                widget: "object",
-                required: false,
-                fields:
-                  [
-                    { label: "Image", name: "image", widget: "image" },
-                    {
-                      label: "Alt Text",
-                      name: "alt",
-                      widget: "string",
-                      required: false,
-                    },
-                    {
-                      label: "Link",
-                      name: "link",
-                      widget: "string",
-                      required: false,
-                    },
-                    {
-                      label: "Credit",
-                      name: "credit",
-                      widget: "string",
-                      required: false,
-                    },
-                  ],
-              },
-            ],
-        }
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        required: false
+        fields:
+          - label: "Image"
+            name: "image"
+            widget: "object"
+            required: false
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string", required: false}
+              - { label: "Credit", name: "credit", widget: "markdown", required: false, minimal: true, buttons: [link, bold, italic], editor_components: [] }
 
   - name: "pages"
     label: "Pages"
@@ -147,9 +119,8 @@ collections: # A list of collections the CMS should be able to edit
         name: "contact"
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Logo, name: logo, widget: image }
-          - { label: Body, name: body, widget: markdown }
-          - label: Contact Entries
+          - { label: Text, name: body, widget: markdown }
+          - label: FAQ
             name: contact_entries
             widget: list
             fields:
@@ -158,7 +129,10 @@ collections: # A list of collections the CMS should be able to edit
                 widget: string
               - label: Text
                 name: text
-                widget: text
+                widget: markdown
+                minimal: true
+                buttons: [link, bold, italic]
+                editor_components: []
       - file: "site/content/shop/_index.md"
         label: "Shop Page"
         name: "shop"

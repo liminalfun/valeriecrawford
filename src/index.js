@@ -2,3 +2,4 @@
 
 import "./sass/main.scss";
 import "./js/uploadcare.js";
+import "./js/accordion.js";
