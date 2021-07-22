@@ -1,140 +1,51 @@
 {{ define "main" }}
-<section class="container theme-light">
-  <div class="left">
-    <img
-      class="full-image cover"
-      data-blink-src="https://ucarecdn.com/8e17bfcc-e663-4ed0-8b81-8bd38fa74612/VALERIE_CRAWFORD_OUTPUT-14_JPG"
-      alt=""
-    />
-  </div>
-  <div class="right">
-    <img
-      class="full-image"
-      data-blink-src="https://ucarecdn.com/42e5496a-6495-4b81-be10-541be44e5473/sinthome-movement.gif"
-      alt=""
-    />
-  </div>
-  <div class="fixed-center">
-    <img src="img/logo_green.svg" alt="" />
-  </div>
-</section>
-<section class="container theme-light-1">
-  <div class="left">
-    <img
-      class="full-image cover"
-      data-blink-src="https://ucarecdn.com/64bd03b1-e814-4f9e-a83a-8c56e4ec29c5/VALERIE_CRAWFORD_OUTPUT-4
-      1.jpg"
-      alt=""
-    />
-  </div>
-  <div class="right">
-    <p>
-      The Sinthome is a link that binds together the three rings of the
-      borromean knot. Each ring represents an order of the psyche: The real, the
-      symbolic, and the imaginary. They constitute subjectivity, and bound
-      together, the way subjectivity is formed in and by the world. Language and
-      images create a sense of the self that we use to identify ourselves and
-      others, within known categories, recognizable traits, and diagnosed
-      maladies. The Sinthome collection plays with the idea of becoming aware of
-      this bind, and making movements, interactions, and expressions that undo
-      it. Who are you in your REAL: before representation, reflection, and
-      symbolization?
-    </p>
-  </div>
-</section>
-<section class="container theme-light-2">
-  <div class="left">
-    <img
-      class="full-image cover"
-      data-blink-src="https://ucarecdn.com/3f3df2fc-4721-4428-b496-9e8b3f130047/VALERIE_CRAWFORD_OUTPUT-19
-      1.jpg"
-      alt=""
-    />
-  </div>
-  <div class="fixed-center line-bottom">
-    <a href="/shop">SHOP COLLECTION</a>
-  </div>
-  <div class="right"></div>
-</section>
-<section class="container theme-light-3">
-  <div class="left">
-    <img
-      class="full-image cover"
-      data-blink-src="https://ucarecdn.com/9927017d-f415-4472-ab51-bff78063cafd/VALERIE_CRAWFORD_OUTPUT-8
-      1.jpg"
-      alt=""
-    />
-  </div>
-  <div class="right">
-    <p class="color-white">
-      I create objects that experiment with form and function, allowing the
-      wearer to re-awaken an awareness of the interplay between themselves and
-      their surroundings. Jewelry is a poignant and beautiful way to interface
-      this experience: it sits on the skin, directly between the body and the
-      world. Opening up the space of play between the porous boundaries of self
-      and other.
-    </p>
-  </div>
-  <div class="fixed-center bottom">
-    <a href="/process">READ PROCESS</a>
-    <div class="line-left" />
-  </div>
-</section>
-
-{{/*
-<div class="fixed-center">
-  <img src="img/logo_green.svg" alt="" />
-</div>
-*/}} {{/*
-<div class="sticky-container">
-  <div class="left">
-    <div class="sticky full-image">
-      <img
-        data-blink-src="https://ucarecdn.com/c7ebff16-51e5-4aef-85b3-55f41907f8e5/VALERIE_CRAWFORD_OUTPUT
-    1.jpg"
-        alt=""
-      />
-    </div>
-    <div class="sticky full-image">
-      <img
-        data-blink-src="https://ucarecdn.com/c7ebff16-51e5-4aef-85b3-55f41907f8e5/VALERIE_CRAWFORD_OUTPUT
-    1.jpg"
-        alt=""
-      />
-    </div>
-    <div class="sticky full-image">
-      <img
-        data-blink-src="https://ucarecdn.com/c7ebff16-51e5-4aef-85b3-55f41907f8e5/VALERIE_CRAWFORD_OUTPUT
-    1.jpg"
-        alt=""
-      />
-    </div>
-  </div>
-  <div class="right">
-    <div class="sticky text">
-      <a href="/shop" class="btn">SHOP COLLECTION</a>
-    </div>
-    <div class="sticky text">
-      <p>
-        The Sinthome is a link that binds together the three rings of the
-        borromean knot. Each ring represents an order of the psyche: The real,
-        the symbolic, and the imaginary. They constitute subjectivity, and bound
-        together, the way subjectivity is formed in and by the world. Language
-        and images create a sense of the self that we use to identify ourselves
-        and others, within known categories, recognizable traits, and diagnosed
-        maladies. The Sinthome collection plays with the idea of becoming aware
-        of this bind, and making movements, interactions, and expressions that
-        undo it. Who are you in your REAL: before representation, reflection,
-        and symbolization?
-      </p>
-    </div>
-    <div class="full-image image-2">
-      <img
-        data-blink-src="https://ucarecdn.com/c7ebff16-51e5-4aef-85b3-55f41907f8e5/VALERIE_CRAWFORD_OUTPUT
-    1.jpg"
-        alt=""
-      />
-    </div>
-  </div>
-</div>
-*/}} {{ end }}
+  {{ with .Params.intro }}
+    <section class="container theme-light">
+      <div class="left">
+        <img
+          class="full-image cover"
+          data-blink-src="{{ .left.image }}"
+          alt="{{ .left.alt }}"
+        />
+      </div>
+      <div class="right">
+        <img
+          class="full-image"
+          data-blink-src="{{ .right.image }}"
+          alt="{{ .right.alt }}"
+        />
+      </div>
+      <div class="fixed-center">
+        <img src="{{ .center }}" alt="" />
+      </div>
+    </section>
+  {{ end }}
+  {{ range .Params.content }}
+      {{ with .section }}
+      <section class="container theme-light-1">
+        <div class="left">
+          {{ with .image }}
+            <img
+              class="full-image cover"
+              data-blink-src="{{ .image }}"
+              alt="{{ .alt }}"
+            />
+          {{ end }}
+        </div>
+        {{ with .link }}
+          <div class="fixed-center {{.placement}}">
+            <a href="{{ .url }}">{{ .label }}</a>
+            {{ if eq .line "Yes" }}
+              <div class="line-left"></div>
+            {{ end }}
+          </div>
+        {{ end }}
+        <div class="right">
+          {{ with .text }}
+            <p class="{{ .color }}">{{ .text }}</p>
+          {{ end }}
+        </div>
+      </section>
+      {{ end }}
+  {{ end }}
+{{ end }}
