@@ -157,3 +157,184 @@ collections: # A list of collections the CMS should be able to edit
         name: "process"
         fields:
           - { label: Title, name: title, widget: string }
+          - label: "Section 1"
+            name: "section_01"
+            widget: object
+            summary: "Section"
+            fields:
+              - label: "Text blurb"
+                name: "text"
+                widget: "object"
+                fields: 
+                  - label: "Text 1"
+                    name: "text_01"
+                    widget: markdown
+                    required: false
+                    buttons: [link, bold, italic]
+                    editor_components: []
+                  - label: "Text 2"
+                    name: "text_02"
+                    widget: markdown
+                    required: false
+                    buttons: [link, bold, italic]
+                    editor_components: []
+              - label: "Image 1"
+                name: "image_01"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string", required: false}
+                  - { label: "Credit", name: "credit", widget: "markdown", required: false, minimal: true, buttons: [link, bold, italic], editor_components: [] }
+              - label: "Image 2"
+                name: "image_02"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string", required: false}
+                  - { label: "Credit", name: "credit", widget: "markdown", required: false, minimal: true, buttons: [link, bold, italic], editor_components: [] }
+              - label: "Image 3"
+                name: "image_03"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string", required: false}
+                  - { label: "Credit", name: "credit", widget: "markdown", required: false, minimal: true, buttons: [link, bold, italic], editor_components: [] }
+              - label: "Image 4"
+                name: "image_04"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string", required: false}
+                  - { label: "Credit", name: "credit", widget: "markdown", required: false, minimal: true, buttons: [link, bold, italic], editor_components: [] }
+          - label: "Section 2"
+            name: "section_02"
+            widget: object
+            hint: "Full-width image with text in middle"
+            summary: "Section"
+            fields:
+              - label: "Image"
+                name: "image"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string", required: false}
+                  - { label: "Credit", name: "credit", widget: "markdown", required: false, minimal: true, buttons: [link, bold, italic], editor_components: [] }
+              - label: "Text blurb"
+                name: "text"
+                widget: "object"
+                fields: 
+                  - label: "Text"
+                    name: "text"
+                    widget: markdown
+                    required: false
+                    buttons: [link, bold, italic]
+                    editor_components: []
+                  - { label: "Color", name: "color", widget: "select", required: false, options: ["color-white", "color-dark"]}
+          - label: "Section 3"
+            name: "section_03"
+            widget: object
+            summary: "Section"
+            fields:
+              - label: "Overlapping images"
+                name: "overlap"
+                widget: "object"
+                required: false
+                fields:
+                - label: "Image on Bottom"
+                  name: "image_bottom"
+                  widget: "object"
+                  required: false
+                  fields:
+                    - { label: "Image", name: "image", widget: "image" }
+                    - { label: "Alt Text", name: "alt", widget: "string", required: false}
+                    - { label: "Credit", name: "credit", widget: "markdown", required: false, minimal: true, buttons: [link, bold, italic], editor_components: [] }
+                - label: "Image on Top"
+                  name: "image_top"
+                  widget: "object"
+                  required: false
+                  fields:
+                    - { label: "Image", name: "image", widget: "image" }
+                    - { label: "Alt Text", name: "alt", widget: "string", required: false}
+                    - { label: "Credit", name: "credit", widget: "markdown", required: false, minimal: true, buttons: [link, bold, italic], editor_components: [] }
+              - label: "Text blurb"
+                name: "text"
+                widget: "object"
+                fields: 
+                  - label: "Text"
+                    name: "text"
+                    widget: markdown
+                    required: false
+                    buttons: [link, bold, italic]
+                    editor_components: []
+                  - { label: "Color", name: "color", widget: "select", required: false, options: ["color-white", "color-dark"]}
+          - label: "Section 4"
+            name: "section_04"
+            widget: object
+            hint: "Full-width image with two text blurbs"
+            summary: "Section"
+            fields:
+              - label: "Image"
+                name: "image"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string", required: false}
+                  - { label: "Credit", name: "credit", widget: "markdown", required: false, minimal: true, buttons: [link, bold, italic], editor_components: [] }
+              - label: "Text blurb on top"
+                name: "text_top"
+                widget: "object"
+                fields: 
+                  - label: "Text"
+                    name: "text"
+                    widget: markdown
+                    required: false
+                    buttons: [link, bold, italic]
+                    editor_components: []
+                  - { label: "Color", name: "color", widget: "select", required: false, options: ["color-white", "color-dark"]}
+              - label: "Text blurb on bottom"
+                name: "text_bottom"
+                widget: "object"
+                fields: 
+                  - label: "Text"
+                    name: "text"
+                    widget: markdown
+                    required: false
+                    buttons: [link, bold, italic]
+                    editor_components: []
+                  - { label: "Color", name: "color", widget: "select", required: false, options: ["color-white", "color-dark"]}
+          - label: "Section 5"
+            name: "section_05"
+            widget: object
+            hint: "Half-width image with skematic poem"
+            summary: "Section"
+            fields:
+              - label: "Image"
+                name: "image"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string", required: false}
+                  - { label: "Credit", name: "credit", widget: "markdown", required: false, minimal: true, buttons: [link, bold, italic], editor_components: [] }
+              - label: "Text 1"
+                name: "text_01"
+                widget: "string"
+                required: false
+              - label: "Text 2"
+                name: "text_02"
+                widget: "string"
+                required: false
+              - label: "Text 3"
+                name: "text_03"
+                widget: "string"
+                required: false
+              - label: "Text 4"
+                name: "text_04"
+                widget: "string"
+                required: false

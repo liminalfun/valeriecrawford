@@ -1,0 +1,146 @@
+
+{{ define "main" }}
+
+  <div class="process">
+    <h1>{{ .Title }}</h1>
+
+    {{/*  Section 1  */}}
+    {{ with .Params.section_01 }}
+      <section class="">
+        <div class="left">
+          {{ with .text_01 }}
+            <p class="{{ .color }}">{{ .text }}</p>
+          {{ end }}
+          {{ with .image_01 }}
+            <img
+              class="full-image"
+              data-blink-src="{{ .image }}"
+              alt="{{ .alt }}"
+            />
+          {{ end }}
+          {{ with .image_03 }}
+            <img
+              class="full-image"
+              data-blink-src="{{ .image }}"
+              alt="{{ .alt }}"
+            />
+          {{ end }}
+          {{ with .image_04 }}
+            <img
+              class="full-image"
+              data-blink-src="{{ .image }}"
+              alt="{{ .alt }}"
+            />
+          {{ end }}
+        </div>
+        <div class="right">
+          {{ with .image_02 }}
+            <img
+              class="full-image"
+              data-blink-src="{{ .image }}"
+              alt="{{ .alt }}"
+            />
+          {{ end }}
+          {{ with .text_02 }}
+            <p class="{{ .color }}">{{ .text }}</p>
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+
+    {{/*  Section 2  */}}
+    {{ with .Params.section_02 }}
+      <section>
+        <div>
+          {{ with .image }}
+            <img
+                class="full-image"
+                data-blink-src="{{ .image }}"
+                alt="{{ .alt }}"
+              />
+          {{ end }}
+          
+          {{ with .text }}
+            <p class="{{ .color }}">{{ .text }}</p>
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+
+    {{/*  Section 3  */}}
+    {{ with .Params.section_03 }}
+      <section>
+        <div>
+          {{ with .overlap }}
+            {{ with .image_top }}
+              <img
+                class="full-image"
+                data-blink-src="{{ .image }}"
+                alt="{{ .alt }}"
+              />
+            {{ end }}
+
+          {{ with .image_bottom }}
+              <img
+                class="full-image"
+                data-blink-src="{{ .image }}"
+                alt="{{ .alt }}"
+              />
+            {{ end }}
+          {{ end }}
+          
+          {{ with .text }}
+            <p class="{{ .color }}">{{ .text }}</p>
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+
+    {{/*  Section 4  */}}
+    {{ with .Params.section_04 }}
+      <section>
+        <div>
+          {{ with .text_top }}
+            <p class="{{ .color }}">{{ .text }}</p>
+          {{ end }}
+
+          {{ with .image }}
+            <img
+              class="full-image"
+              data-blink-src="{{ .image }}"
+              alt="{{ .alt }}"
+            />
+          {{ end }}
+
+          {{ with .text_bottom }}
+            <p class="{{ .color }}">{{ .text }}</p>
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+
+    {{/*  Section 5  */}}
+    {{ with .Params.section_05 }}
+      <section>
+        <div>
+          {{ with .image }}
+            <img
+              class="full-image"
+              data-blink-src="{{ .image }}"
+              alt="{{ .alt }}"
+            />
+          {{ end }}
+        </div>
+        <div>
+          <p>{{ .text_01 }}</p>
+          <p>{{ .text_02 }}</p>
+          <p>{{ .text_03 }}</p>
+          <p>{{ .text_04 }}</p>
+        </div>
+      </section>
+    {{ end }}
+
+
+  </div>
+
+{{ end }}
