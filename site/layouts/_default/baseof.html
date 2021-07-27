@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="{{ $.Site.Language.Lang }}">
+<html lang="{{ $.Site.Language.Lang }}" class="{{ if (eq .Type "shop" "sinthome") }} theme-dark {{ end }}">
   {{ partial "head" . }}
-  <body class="{{ if (eq .Type "shop" "sinthome") }} theme-dark {{ end }}{{ if not .IsHome }}h-full{{ end }}">
+  <body class="{{ if (eq .Type "shop" "process") }}h-full{{ end }}">
 
     {{ block "header" . }}{{ partial "marquee" . }}{{end}}
 

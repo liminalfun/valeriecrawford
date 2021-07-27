@@ -1,6 +1,13 @@
 {{ define "main" }}
 
   <div class="contact">
+    <div class="contact-image">
+      <img
+        data-blink-src="https://ucarecdn.com/c7ebff16-51e5-4aef-85b3-55f41907f8e5/VALERIE_CRAWFORD_OUTPUT
+      1.jpg"
+        alt=""
+      />
+    </div>
     <div class="contact-info">
       <h1>Contact</h1>
       {{ .Content }} 
@@ -20,13 +27,7 @@
       
       {{ partial "contact-form" . }}
     </div>
-    <div class="contact-image">
-      <img
-        data-blink-src="https://ucarecdn.com/c7ebff16-51e5-4aef-85b3-55f41907f8e5/VALERIE_CRAWFORD_OUTPUT
-      1.jpg"
-        alt=""
-      />
-    </div>
+    
   </div>
 
 {{ end }}
