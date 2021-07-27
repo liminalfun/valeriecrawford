@@ -2,6 +2,8 @@
   margin: $sp2 $sp1;
 }
 .shop {
+  display: flex;
+  flex-direction: column-reverse;
   .line-bottom {
     border-bottom: 1px $color-accent solid;
     padding: 0.25em 0;
@@ -18,13 +20,11 @@
 
 .shop-grid {
   display: flex;
-  > * {
-    flex-basis: calc(100% / 3);
-  }
+  flex-wrap: wrap;
 
   .product-teaser {
     width: 150px;
-    height: auto;
+    height: 213px;
     position: relative;
     .product-link {
       height: 150px;
@@ -65,13 +65,19 @@
   }
 }
 
+@include breakpoint(mobileonly) {
+  .shop-grid {
+    margin-bottom: 2rem;
+  }
+}
+
 @include breakpoint(phablet) {
   .shop-wrapper {
     margin: $sp3 $sp4;
     padding: 1em 0;
   }
   .shop {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     > * {
       flex-basis: 45%;
