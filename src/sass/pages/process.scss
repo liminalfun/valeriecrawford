@@ -66,6 +66,7 @@
         }
         @include breakpoint(phablet) {
           margin-top: 20%;
+          
         }
       }
 
@@ -228,10 +229,6 @@
 
   .w-30 {
     width: 30%;
-  }
-
-  .w-39 {
-    width: 39%;
   }
 
   .w-40 {
