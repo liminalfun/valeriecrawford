@@ -16,11 +16,11 @@
           {{ range where (where .Site.Pages "Type" "sinthome") "Params.title" "!=" nil }}
           <div class="product-teaser">
             <a class="product-link" href="{{ .Permalink }}">
-              <div class="product-images">
+              <!-- <div class="product-images"> -->
                 {{ range first 1 .Params.images }}
-                <img data-blink-src="{{ .image.image }}" />
+                <img class="product-image" data-blink-src="{{ .image.image }}" />
                 {{ end }}
-              </div>
+              <!-- </div> -->
             </a>
             <div class="product-name">
               <h4>{{ .Params.title }}</h4>
