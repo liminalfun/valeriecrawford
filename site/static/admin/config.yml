@@ -9,6 +9,7 @@ media_library:
   name: uploadcare
   config:
     publicKey: 414af48ed6e30290fd36
+    tabs: 'file url'
   settings:
     autoFilename: true
 
@@ -355,3 +356,5 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - { label: "Marquee", name: "marquee", widget: "text", required: false }
           - { label: "Logo", name: "logo", widget: "image" }
+          - { label: "Social preview image", name: "seo_preview", widget: "image", hint: "Image for previews on social media & chat apps" }
+          - { label: "SEO description", name: "seo_description", widget: "text", hint: "50-100 words to appear in search results, and in previews on social media & chat apps" }

@@ -48,7 +48,15 @@
     content="Valerie Crawford | Made to order silver jewelry"
   />
   <meta property="og:url" content="/" />
-  <meta property="og:image" content="/img/og-image.jpg" />
+  <meta property="og:image" content="{{ .Site.Params.seo_preview }}" />
+  <meta
+    property="og:description"
+    content="{{ if .Params.seo_description }}{{ .Params.seo_description }}{{ else }}{{ .Site.Params.seo_description}}{{ end }}"
+  />
+  <meta
+    name="description"
+    content="{{ if .Params.seo_description }}{{ .Params.seo_description }}{{ else }}{{ .Site.Params.seo_description}}{{ end }}"
+  />
 
   {{ if .IsHome }}
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
