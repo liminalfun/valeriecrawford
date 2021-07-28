@@ -21,9 +21,12 @@
     line-height: 160%;
   }
 }
+
 .accordion:first-child {
   border-top: none;
-  border-bottom: 1px solid $color-dark
+}
+.accordion:last-child {
+  border-bottom: 1px solid $color-dark;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -35,6 +38,7 @@
 
 .panel {
 padding: 16px;
+padding-top: 0;
 max-height: 0;
 display: none;
 overflow: hidden;

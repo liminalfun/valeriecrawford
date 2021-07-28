@@ -119,7 +119,7 @@ collections: # A list of collections the CMS should be able to edit
         name: "contact"
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Text, name: body, widget: markdown }
+          - { label: Text, name: body, widget: markdown, minimal: true, buttons: [link, bold, italic], editor_compoents: [], required: false }
           - label: FAQ
             name: contact_entries
             widget: list
@@ -133,6 +133,14 @@ collections: # A list of collections the CMS should be able to edit
                 minimal: true
                 buttons: [link, bold, italic]
                 editor_components: []
+          - label: Contact Form
+            name: form
+            widget: object
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Email, name: email, widget: string }
+              - { label: Message, name: message, widget: string }
+              - { label: Submit Button, name: btn, widget: string }
       - file: "site/content/shop/_index.md"
         label: "Shop Page"
         name: "shop"
