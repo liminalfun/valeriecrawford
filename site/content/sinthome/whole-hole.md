@@ -11,8 +11,7 @@ images:
       image: https://ucarecdn.com/e4ab36dd-43e9-4d56-b4b6-7d40b66a13d4/Whole hole
         2.jpg
   - image:
-      image: https://ucarecdn.com/999c9e06-816c-4b98-a89d-ce1814010371/Whole hole
-        3.tif
+      image: https://ucarecdn.com/513b5829-2968-4bd3-9731-103881858e29/ce1f292494bb4720df495fdaceb1ecd9eGQ33RIQljbi4jGB-0.jpeg
   - image:
       image: https://ucarecdn.com/4def6cfb-f53c-4882-99c7-23d38b44f246/Whole hole
         4.tif
