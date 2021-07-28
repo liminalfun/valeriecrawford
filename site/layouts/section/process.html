@@ -7,25 +7,11 @@
     {{/*  Section 1  */}}
     {{ with .Params.section_01 }}
       <section class="section--01">
-        <div class="">
+        <div class="p-left">
           {{ with .text }}
-            <p class="{{ .color }}">{{ .text_01 }}</p>
+            <p class="w-500 {{ .color }}">{{ .text_01 }}</p>
           {{ end }}
           {{ with .image_01 }}
-            <img
-              class="w-40"
-              data-blink-src="{{ .image }}"
-              alt="{{ .alt }}"
-            />
-          {{ end }}
-          {{ with .image_03 }}
-            <img
-              class="w-40"
-              data-blink-src="{{ .image }}"
-              alt="{{ .alt }}"
-            />
-          {{ end }}
-          {{ with .image_04 }}
             <img
               class="w-40"
               data-blink-src="{{ .image }}"
@@ -36,32 +22,50 @@
         <div class="">
           {{ with .image_02 }}
             <img
-              class="full-image"
+              class="full-image mt-80"
               data-blink-src="{{ .image }}"
               alt="{{ .alt }}"
             />
           {{ end }}
-          {{ with .text }}
-            <p class="{{ .color }}">{{ .text_02 }}</p>
+        </div>
+        <div class="flex-col">
+          {{ with .image_03 }}
+            <img
+              class="w-40 z-30"
+              data-blink-src="{{ .image }}"
+              alt="{{ .alt }}"
+            />
           {{ end }}
+          <div class="flex-wrap">
+            {{ with .image_04 }}
+              <img
+                class="w-40 -mt-30"
+                data-blink-src="{{ .image }}"
+                alt="{{ .alt }}"
+              />
+            {{ end }}
+            {{ with .text }}
+              <p class="pl-1 w-50 {{ .color }}">{{ .text_02 }}</p>
+            {{ end }}
+          </div>
         </div>
       </section>
     {{ end }}
 
     {{/*  Section 2  */}}
     {{ with .Params.section_02 }}
-      <section>
-        <div>
+      <section class="p-0">
+        <div class="rel">
           {{ with .image }}
             <img
-                class="full-image"
+                class="full-image vw-100"
                 data-blink-src="{{ .image }}"
                 alt="{{ .alt }}"
               />
           {{ end }}
           
           {{ with .text }}
-            <p class="{{ .color }}">{{ .text }}</p>
+            <p class="abs top-10 left-10 z-30 color-white {{ .color }}">{{ .text }}</p>
           {{ end }}
         </div>
       </section>
@@ -69,51 +73,54 @@
 
     {{/*  Section 3  */}}
     {{ with .Params.section_03 }}
-      <section>
-        <div>
+      <section class="rel">
+        <div class="rel mx-auto w-80">
           {{ with .overlap }}
             {{ with .image_top }}
               <img
-                class="full-image"
+                class="full-image abs z-20 w-50 top-25"
                 data-blink-src="{{ .image }}"
                 alt="{{ .alt }}"
               />
             {{ end }}
 
-          {{ with .image_bottom }}
+            {{ with .image_bottom }}
               <img
-                class="full-image"
+                class="full-image rel w-80 ml-20"
                 data-blink-src="{{ .image }}"
                 alt="{{ .alt }}"
               />
             {{ end }}
           {{ end }}
-          
+
           {{ with .text }}
-            <p class="{{ .color }}">{{ .text }}</p>
+            <p class="abs right-0 top-0 z-30 {{ .color }}">{{ .text }}</p>
           {{ end }}
         </div>
+          
+        
+        
       </section>
     {{ end }}
 
     {{/*  Section 4  */}}
     {{ with .Params.section_04 }}
-      <section>
-        <div>
+      <section class="p-0">
+        <div class="rel py-2">
           {{ with .text_top }}
-            <p class="{{ .color }}">{{ .text }}</p>
+            <p class="abs top-0 left-10 z-30 {{ .color }}">{{ .text }}</p>
           {{ end }}
 
           {{ with .image }}
             <img
-              class="full-image"
+              class="full-image vw-100 mt-60"
               data-blink-src="{{ .image }}"
               alt="{{ .alt }}"
             />
           {{ end }}
 
           {{ with .text_bottom }}
-            <p class="{{ .color }}">{{ .text }}</p>
+            <p class="abs -bottom-60 right-0 color-white z-30 {{ .color }}">{{ .text }}</p>
           {{ end }}
         </div>
       </section>
@@ -121,8 +128,8 @@
 
     {{/*  Section 5  */}}
     {{ with .Params.section_05 }}
-      <section>
-        <div>
+      <section class="flex-col mt-60">
+        <div class="abs right-0">
           {{ with .image }}
             <img
               class="full-image"
