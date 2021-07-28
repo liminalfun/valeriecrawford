@@ -3,8 +3,12 @@
   {{ $stylesheet := .Site.Data.webpack.main }} {{ with $stylesheet.css }}
   <link href="{{ relURL . }}" rel="stylesheet" />
   {{ end }}
-  <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@200;300&display=swap">
+
   <link rel="preconnect" href="/sass/font-gulax.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@200;300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap" rel="stylesheet"> 
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta
