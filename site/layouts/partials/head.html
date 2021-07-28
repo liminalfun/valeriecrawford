@@ -3,7 +3,8 @@
   {{ $stylesheet := .Site.Data.webpack.main }} {{ with $stylesheet.css }}
   <link href="{{ relURL . }}" rel="stylesheet" />
   {{ end }}
-
+  <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@200;300&display=swap">
+  <link rel="preconnect" href="/sass/font-gulax.css">
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta

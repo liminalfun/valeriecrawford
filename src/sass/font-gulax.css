@@ -1,0 +1,7 @@
+@font-face {
+  font-family: Gulax;
+  font-style: normal;
+  src: url("./fonts/Gulax-Regular.woff2") format("woff2"),
+    url("./fonts/Gulax-Regular.woff") format("woff"),
+    url("./fonts/Gulax-Regular.eot");
+}
