@@ -10,7 +10,7 @@ section_01:
   image_01:
     image: https://ucarecdn.com/03cf678c-1661-423c-8c6a-1af96f8f4d4d/VALERIE_CRAWFORD_OUTPUT-10.JPG
   image_02:
-    image: https://ucarecdn.com/f9dae84e-ca77-4496-9b6a-b7a29b776cb3/Process_02.png
+    image: https://ucarecdn.com/02093777-03eb-4243-948c-f67ec78fa4db/IMG_2612 2-1.jpg
   image_03:
     image: https://ucarecdn.com/e7867a6f-2eab-4852-8374-3f34cdb8fd21/White-Text-Rotating.gif
   image_04:
