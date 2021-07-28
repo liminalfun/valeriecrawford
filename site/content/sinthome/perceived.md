@@ -7,5 +7,5 @@ images:
   - image:
       image: https://ucarecdn.com/d9bf9798-0619-432c-a7b5-b79a94546df3/VALERIE_CRAWFORD_020.jpg
   - image:
-      image: https://ucarecdn.com/e0142c64-6933-4785-b5d4-2bfaa5b253bd/VALERIE_CRAWFORD_035.png
+      image: https://ucarecdn.com/45c504a8-95a2-4f7d-9e92-6743b85556d7/VALERIE_CRAWFORD_035.png
 ---
