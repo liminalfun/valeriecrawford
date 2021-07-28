@@ -29,6 +29,7 @@
     // width: 150px;
     // height: 200px;
     width: calc((100% / 3) - 8px);
+    height: auto;
     position: relative;
     margin: 4px;
 
@@ -88,13 +89,13 @@
     justify-content: space-between;
     position: relative;
     .shop-text {
-      width: 50%;
+      width: 30%;
       height: 100%;
       position: sticky;
       top: 80px;
     }
     .shop-grid {
-      width: 50%;
+      width: 70%;
       margin: 1em;
       justify-content: flex-end;
     }
