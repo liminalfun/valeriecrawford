@@ -3,14 +3,16 @@
     <section class="product">
       <div class="product-images">
         {{ range .images }}
-          <img data-blink-src="{{ .img.image }}" />
+          <img data-blink-src="{{ .image.image }}" />
         {{ end }}
       </div>
       <div class="product-info">
         <h1 class="product-headline">{{ .Title }}</h1>
-        <div class="product-price">${{ .price }} CAD</div>
-        <p>{{ .description }}</p>
-        <a href="{{ .link }}" class="btn">Buy Now </a>
+        <div class="product-buy">
+          <div class="product-price">${{ .price }} CAD</div>
+          <a href="{{ .link }}" class="btn">Buy Now </a>
+        </div>
+        <div class="product-description">{{ .description | markdownify }}</div>
       </div>
     </section>
   {{ end }} 

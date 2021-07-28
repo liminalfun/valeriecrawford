@@ -1,6 +1,8 @@
 ---
 title: Bound
 link: https://buy.stripe.com/6oE9Bk49GdcX82kaEE
+description: 925 Silver, Recycled Leather. Can be worn as a necklace, headband, or bracelet.
+price: 275
 images:
   - image:
       image: https://ucarecdn.com/6bd5fdc7-9517-4d97-ac3b-b1f8c559f9ab/Bound 1.jpg

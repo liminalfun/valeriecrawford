@@ -16,20 +16,45 @@
   .product-info {
     width: 48%;
   }
+  .product-description {
+    font-size: 0.875rem;
+    margin-top: 1rem;
+  }
 }
 
 @include breakpoint(mobileonly) {
   .product {
-    margin-top: 7rem;
-    h1 {
-      position: absolute;
-      top: 1em;
-      left: 25%;
+    margin: 0;
+    flex-direction: column;
+    position: relative;
+    .product-images {
+      width: 100vw;
+      height: auto;
+      > img {
+        margin: 0;
+      }
+    }
+    .product-info {
+      width: auto;
+      position: fixed;
+      bottom: 0;
+      padding: 1em;
+      padding-bottom: 58px;
+      background-color: transparentize(black, 0.5);
+      h1 {
+        margin: 0;
+      }
+    }
+    .product-buy {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
     .btn {
       min-width: auto;
       padding-left: 1em;
       padding-right: 1em;
+      margin: 0;
     }
   }
 }

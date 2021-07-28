@@ -3,7 +3,7 @@
 }
 .shop {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   .line-bottom {
     border-bottom: 1px $color-accent solid;
     padding: 0.25em 0;
@@ -24,21 +24,14 @@
 
   .product-teaser {
     width: 150px;
-    height: 213px;
+    height: 200px;
     position: relative;
+    margin: 8px;
+
     .product-link {
-      height: 150px;
-      width: 150px;
-      &:hover .product-name {
+      &:hover .product-name, &:hover {
         opacity: 1;
       }
-    }
-  }
-  .product-link {
-    width: 150px;
-    height: auto;
-    &:hover .product-name {
-      opacity: 1;
     }
   }
   .product-images {
@@ -50,14 +43,13 @@
       height: auto;
       object-fit: cover;
     }
-    img:nth-child(2) {
-      display: none;
-    }
   }
   .product-name {
     display: block;
+    width: 150px;
     position: absolute;
     bottom: 0;
+    pointer-events: none;
     h4 {
       margin: 0.5rem;
       text-transform: uppercase;
@@ -66,8 +58,23 @@
 }
 
 @include breakpoint(mobileonly) {
+  .shop-wrapper {
+    margin: 0;
+    margin-bottom: 58px;
+  }
   .shop-grid {
-    margin-bottom: 2rem;
+    .product-teaser {
+      margin: 4px;
+    }
+  }
+  .shop-text {
+    margin: 2em 1em 0.5em;
+    h1 { 
+      margin-bottom: 0; 
+    }
+    .shop-description {
+      font-size: 0.875rem;
+    }
   }
 }
 
@@ -82,6 +89,9 @@
     > * {
       flex-basis: 45%;
     }
+    .shop-text {
+      position: sticky;
+    }
     .shop-grid {
       margin: 1em;
     }
@@ -93,8 +103,7 @@
     .product-name {
       opacity: 0;
       transition: $transition;
-      width: 100%;
-      background-color: transparentize($color-black, 0.5);
+      background-color: transparentize(black, 0.5);
       color: $color-light;
     }
   }

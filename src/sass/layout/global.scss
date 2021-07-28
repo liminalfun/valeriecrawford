@@ -122,3 +122,15 @@ a:not(.btn) {
 .hide {
   display: none;
 }
+
+.hide-sm {
+  @include breakpoint(mobileonly) {
+    display: none;
+  }
+}
+
+.hide-md {
+  @include breakpoint(phablet) {
+    display: none;
+  }
+}
