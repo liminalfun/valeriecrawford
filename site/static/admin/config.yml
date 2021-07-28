@@ -338,3 +338,11 @@ collections: # A list of collections the CMS should be able to edit
                 name: "text_04"
                 widget: "string"
                 required: false
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - file: "site/config/_default/params.toml"
+        label: "Marquee"
+        name: "marquee"
+        fields:
+          - { label: "Marquee", name: "marquee", widget: "text", required: false }
