@@ -1,6 +1,10 @@
 .product {
   margin: $sp3;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
   .product-images {
+    width: 48%;
     > img {
       width: 100%;
       object-fit: cover;
@@ -10,18 +14,28 @@
     }
   }
   .product-info {
+    width: 48%;
+  }
+}
+
+@include breakpoint(mobileonly) {
+  .product {
+    margin-top: 7rem;
+    h1 {
+      position: absolute;
+      top: 1em;
+      left: 25%;
+    }
+    .btn {
+      min-width: auto;
+      padding-left: 1em;
+      padding-right: 1em;
+    }
   }
 }
 
 @include breakpoint(phablet) {
   .product {
-    display: flex;
-    justify-content: space-between;
-    .product-images {
-      width: 48%;
-    }
-    .product-info {
-      width: 48%;
-    }
+    margin-top: 80px;
   }
 }
