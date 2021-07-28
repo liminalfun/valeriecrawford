@@ -6,34 +6,34 @@
 
     {{/*  Section 1  */}}
     {{ with .Params.section_01 }}
-      <section class="">
-        <div class="left">
-          {{ with .text_01 }}
-            <p class="{{ .color }}">{{ .text }}</p>
+      <section class="section--01">
+        <div class="">
+          {{ with .text }}
+            <p class="{{ .color }}">{{ .text_01 }}</p>
           {{ end }}
           {{ with .image_01 }}
             <img
-              class="full-image"
+              class="w-40"
               data-blink-src="{{ .image }}"
               alt="{{ .alt }}"
             />
           {{ end }}
           {{ with .image_03 }}
             <img
-              class="full-image"
+              class="w-40"
               data-blink-src="{{ .image }}"
               alt="{{ .alt }}"
             />
           {{ end }}
           {{ with .image_04 }}
             <img
-              class="full-image"
+              class="w-40"
               data-blink-src="{{ .image }}"
               alt="{{ .alt }}"
             />
           {{ end }}
         </div>
-        <div class="right">
+        <div class="">
           {{ with .image_02 }}
             <img
               class="full-image"
@@ -41,8 +41,8 @@
               alt="{{ .alt }}"
             />
           {{ end }}
-          {{ with .text_02 }}
-            <p class="{{ .color }}">{{ .text }}</p>
+          {{ with .text }}
+            <p class="{{ .color }}">{{ .text_02 }}</p>
           {{ end }}
         </div>
       </section>
