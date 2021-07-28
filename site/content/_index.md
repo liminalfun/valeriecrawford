@@ -5,7 +5,7 @@ intro:
     image: https://ucarecdn.com/8e17bfcc-e663-4ed0-8b81-8bd38fa74612/VALERIE_CRAWFORD_OUTPUT-14_JPG
   right:
     image: https://ucarecdn.com/e7867a6f-2eab-4852-8374-3f34cdb8fd21/White-Text-Rotating.gif
-  center: https://ucarecdn.com/179f3bd8-b75f-4107-9b06-fd2ce74817f9/logo_green.svg
+  center: https://ucarecdn.com/2c875a8c-0b85-4feb-9d91-85aa80d991c7/-/crop/2140x4000/0,0/-/preview/VC LOGO final.png
 content:
   - section:
       image:
