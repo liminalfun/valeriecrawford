@@ -13,16 +13,16 @@
           {{ end }}
           {{ with .image_01 }}
             <img
-              class="w-40"
+              class="w-39"
               data-blink-src="{{ .image }}"
               alt="{{ .alt }}"
             />
           {{ end }}
         </div>
-        <div class="">
+        <div class="image-02">
           {{ with .image_02 }}
             <img
-              class="full-image mt-80"
+              class="w-39"
               data-blink-src="{{ .image }}"
               alt="{{ .alt }}"
             />
@@ -31,12 +31,12 @@
         <div class="flex-col">
           {{ with .image_03 }}
             <img
-              class="w-60 z-30"
+              class="image-03 z-30"
               data-blink-src="{{ .image }}"
               alt="{{ .alt }}"
             />
           {{ end }}
-          <div class="flex-wrap">
+          <div class="flex-wrap image-04">
             {{ with .image_04 }}
               <img
                 class="w-40 -mt-20"
@@ -45,7 +45,7 @@
               />
             {{ end }}
             {{ with .text }}
-              <p class="pl-1 w-50 {{ .color }}">{{ .text_02 }}</p>
+              <p class="{{ .color }}">{{ .text_02 }}</p>
             {{ end }}
           </div>
         </div>
@@ -54,7 +54,7 @@
 
     {{/*  Section 2  */}}
     {{ with .Params.section_02 }}
-      <section class="p-0">
+      <section class="p-0 section--02">
         <div class="rel">
           {{ with .image }}
             <img
@@ -73,12 +73,12 @@
 
     {{/*  Section 3  */}}
     {{ with .Params.section_03 }}
-      <section class="rel">
+      <section class="rel section--03">
         <div class="rel mx-auto w-80">
           {{ with .overlap }}
             {{ with .image_top }}
               <img
-                class="full-image abs z-20 w-50 top-25"
+                class="image-top full-image abs z-20 w-50 top-25"
                 data-blink-src="{{ .image }}"
                 alt="{{ .alt }}"
               />
@@ -94,7 +94,7 @@
           {{ end }}
 
           {{ with .text }}
-            <p class="abs right-0 top-0 z-30 {{ .color }}">{{ .text }}</p>
+            <p class="abs right-0 top-0 z-30 text-top-top {{ .color }}">{{ .text }}</p>
           {{ end }}
         </div>
           
