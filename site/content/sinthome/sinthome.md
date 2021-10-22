@@ -8,8 +8,4 @@ images:
       image: https://ucarecdn.com/dab7f795-d090-4681-a4d9-faa4d00255b3/Sinthome 1.jpg
   - image:
       image: https://ucarecdn.com/587b5578-c37e-4f69-a641-d0acae5328aa/Sinthome 2.jpg
-  - image:
-      image: https://ucarecdn.com/2c9be363-75e8-4038-9847-414401e4e6bc/Sinthome 3.png
-  - image:
-      image: https://ucarecdn.com/8f661caf-3756-458d-9377-d69c8579701b/VALERIE_CRAWFORD_005.png
 ---
